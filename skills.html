@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills</title>
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/nav_css.css">
+    <link rel="stylesheet" href="css/body_css.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        #skill{
+            background: linear-gradient(to bottom, rgb(28, 28, 28, 0), rgb(118, 11, 91));
+            border-radius: 5px;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="nav_container" id="nav_container">
+                <nav class="navbar">
+                    <ul class="navmenu" id="navmenu">
+                        <li class="nav-item" id="home"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item" id="about"><a class="nav-link" href="about_me.html">About</a></li>
+                        <li class="nav-item" id="service"><a class="nav-link" href="service.html">Service</a></li>
+                        <li class="nav-item" id="skill"><a class="nav-link" href="skills.html">Skill</a></li>
+                        <li class="nav-item" id="contact"><a class="nav-link"href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <section class="skill_page">
+
+        <div class="container2">
+            <div class="title">
+                <h2>Skills</h2>
+                <h3>academic skills</h3>
+            </div>
+            <div class="progress-container">
+                <p>Html/Css</p>
+                <div class="progress-bar">90%</div>
+                <p>Javascript/java</p>
+                <div class="progress-bar">50%</div>
+                <p>Python</p>
+                <div class="progress-bar">70%</div>
+                <p>git</p>
+                <div class="progress-bar">40%</div>
+            </div>
+        </div>
+        <div class="hobbies">
+            <h3 class="title">Hobbies and interest</h3>
+            <div class="interest-img">
+                <img src="images/drawing.png" alt="my drawing">
+                <img src="images/poem.png" alt="my poems">
+                <img src="images/fashion.png" alt="adventure">
+            </div>
+        </div> 
+    </section>
+    <hr>
+    <footer>
+        <div class="footer">
+            <div>
+                <p>This content is © Copyright [2024] [bethelihem wondimneh].</p>
+                <div class="mail">
+                    <img src="icons/Mail.png" alt="">
+                    <p>wondimnehbethelihem@gmail.com</p>
+                </div>
+            </div>
+            <div class="linksinfooter">
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.png" alt="linkdin"></a>
+                    <a href="https://www.linkedin.com/feed/"><p>linkedin</p></a>
+                </div>
+                <div class="github">
+                    <a href="https://github.com/bethelihemw"><img src="icons/github.png" alt="github"></a>
+                    <a href="https://github.com/bethelihemw"><p>github</p></a>
+                </div>
+                <div class="telegram">
+                    <a href="@AstrixW">
+                        <img src="icons/telegram.png" alt="telegram">
+                    </a>
+                    <p>telegram</p>
+                </div>
+            </div>
+        </div>     
+    </footer>
+    <script>const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navmenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });</script>
+        <script src="script.js"></script>
+</body>
+</html>

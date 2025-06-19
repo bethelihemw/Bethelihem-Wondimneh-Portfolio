@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href = "css/nav_css.css">
+    <link rel="stylesheet" href = "css/body_css.css">
+    <link rel="stylesheet" href = "css/footer.css">
+    <link rel="stylesheet" href = "css/services.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <style>
+        #service{
+            background: linear-gradient(to bottom, rgb(28, 28, 28, 0), rgb(118, 11, 91));
+            border-radius: 5px;
+        }
+        </style>
+
+</head>
+<body>
+    <main class="service-page">
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="nav_container" id="nav_container">
+                <nav class="navbar">
+                    <ul class="navmenu" id="navmenu">
+                        <li class="nav-item" id="home"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item" id="about"><a class="nav-link" href="about_me.html">About</a></li>
+                        <li class="nav-item" id="service"><a class="nav-link" href="service.html">Service</a></li>
+                        <li class="nav-item" id="skill"><a class="nav-link" href="skills.html">Skill</a></li>
+                        <li class="nav-item" id="contact"><a class="nav-link"href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <section class="service_page">
+        <div class="container3">
+            <div>
+                <h2>Services</h2>
+            </div>
+            <div class="img_container">
+                <div class="block">
+                    <img id="three" src="images/image 3.png" alt="Image3">
+                    <p>counsle</p>
+                </div>
+                <div class="block">
+                    <img id="two" src="images/image 4.jpg" alt="Image4">
+                    <p>branding</p>
+                </div>
+                <div class="block">
+                    <img id="one" src="images/image 1.png" alt="Image1">
+                    <p>web development</p>
+                </div>
+                <div class="block">
+                    <img id="two"  src="images/image 2.png" alt="Image2">
+                    <p>web design</p>
+                </div>
+                <div class="block">
+                    <img id="three" src="images/image 5.png" alt="Image5">
+                    <p>more</p>
+                </div>  
+            </div>
+            <div>
+                <p id="ads">i will build you you perfect version of the website</p>
+            </div>
+        </div>
+    </section>
+    <hr id="second_one">
+    <footer>
+        <div class="footer">
+            <div>
+                <p>This content is © Copyright [2024] [bethelihem wondimneh].</p>
+                <div class="mail">
+                    <img src="icons/Mail.png" alt="">
+                    <p>wondimnehbethelihem@gmail.com</p>
+                </div>
+            </div>
+            <div class="linksinfooter">
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.png" alt="linkdin"></a>
+                    <a href="https://www.linkedin.com/feed/"><p>linkedin</p></a>
+                </div>
+                <div class="github">
+                    <a href="https://github.com/bethelihemw"><img src="icons/github.png" alt="github"></a>
+                    <a href="https://github.com/bethelihemw"><p>github</p></a>
+                </div>
+                <div class="telegram">
+                    <a href="@AstrixW">
+                        <img src="icons/telegram.png" alt="telegram">
+                    </a>
+                    <p>telegram</p>
+                </div>
+            </div>
+        </div>     
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navmenu');
+        
+        // Add click event to the hamburger to toggle the 'active' class on the nav menu
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });</script>
+        <script src="script.js"></script>
+   
+</main>
+</body>
+</html>

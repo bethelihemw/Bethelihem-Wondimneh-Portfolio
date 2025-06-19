@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav_css.css">
+    <link rel="stylesheet" href="css/body_css.css">
+    <style>
+        #contact{
+            background: linear-gradient(to bottom, rgb(28, 28, 28, 0), rgb(118, 11, 91));
+            border-radius: 5px;
+        }
+        #message-container {
+    margin-top: 20px;
+    text-align: center;
+}
+#errorMessage {
+    color: red;
+    display: none;
+    position: absolute;
+    top: 85vh;
+    font-size: 1.7vw;
+    right: 22vw;
+}
+
+#successMessage {
+    position: absolute;
+    top: 85vh;
+    font-size: 1.7vw;
+    right: 22vw;
+    color: green;
+    display: none;
+}
+        </style>
+</head>
+<body>
+    <main class="contact-page">
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                
+                <div class="nav_container" id="nav_container">
+                    <nav class="navbar">
+                        <ul class="navmenu" id="navmenu">
+                            <li class="nav-item" id="home"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item" id="about"><a class="nav-link" href="about_me.html">About</a></li>
+                            <li class="nav-item" id="service"><a class="nav-link" href="service.html">Service</a></li>
+                            <li class="nav-item" id="skill"><a class="nav-link" href="skills.html">Skill</a></li>
+                            <li class="nav-item" id="contact"><a class="nav-link"href="contacts.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <section class="contact_page">
+            <div class="container5">
+                <div class="subdiv1">
+                     
+                    <h2>Contacts</h2>
+                    <h3>contact info</h3>
+                    <p>Name: [Bethelihem Wondimneh]</p>
+                    <p id="mail"> Email: [wodimnehbethelihem@gmail.com]</p>
+                    <p id="telegram">Telegram Username: @AstrixW</p>
+                    <p> Location: [Addis Ababa, Ethiopia]</p>
+                    <p id="final">I look forward to hearing from you!</p>
+                    <div>
+                        <a href="https://github.com/bethelihemw"><img src="icons/github.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.png" alt="linkedin"></a>
+                        <a href="#telegram"></a><img src="icons/telegram.png" alt="telegram">
+                        <a href="#mail"><img src="icons/Mail.png" alt="email"></a>
+                    </div>
+                </div>
+                <div class="subdiv2">
+                    <h3>contact me</h3>
+                    <div class="flex">
+                        <p>Name        : </p>
+                        <input type="text" id="name" placeholder=" enter name">
+                    </div>
+                    <div class="flex">
+                        <p>Email     :</p>
+                        <input type="text" id="email" placeholder="@">
+                    </div>
+                    <div class="flex">
+                        <p>Message:</p>
+                        <textarea id="message" placeholder=""></textarea>
+                    </div>
+                    <button id="btn3">Send</button>
+                </div>
+
+        <div id="message-container">
+        <div id="errorMessage"></div>
+        <div id="successMessage"></div>
+        </div>
+            </div>
+        </section>
+        <hr> 
+        <footer>
+            <div class="footer">
+                <div>
+                    <p>This content is © Copyright [2024] [bethelihem wondimneh].</p>
+                    <div class="mail">
+                        <img src="icons/Mail.png" alt="">
+                        <p>wondimnehbethelihem@gmail.com</p>
+                    </div>
+                </div>
+                <div class="linksinfooter">
+                    <div class="linkedin">
+                        <a href="https://www.linkedin.com/feed/"><img src="icons/linkedin.png" alt="linkdin"></a>
+                        <a href="https://www.linkedin.com/feed/"><p>linkedin</p></a>
+                    </div>
+                    <div class="github">
+                        <a href="https://github.com/bethelihemw"><img src="icons/github.png" alt="github"></a>
+                        <a href="https://github.com/bethelihemw"><p>github</p></a>
+                    </div>
+                    <div class="telegram">
+                        <a href="@AstrixW">
+                            <img src="icons/telegram.png" alt="telegram">
+                        </a>
+                        <p>telegram</p>
+                    </div>
+                </div>
+            </div>     
+        </footer>
+    </main>
+    <script>
+        const form = document.querySelector('.subdiv2'); // Select the form container
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const sendButton = document.getElementById('btn3');
+      
+        sendButton.addEventListener('click', function(event) {
+          event.preventDefault();
+      
+          const name = nameInput.value.trim();
+          const email = emailInput.value.trim();
+          const message = messageInput.value.trim();
+      
+          errorMessage.textContent = "";
+          successMessage.textContent = "";
+          errorMessage.style.display = 'none';
+          successMessage.style.display = 'none';
+      
+          if (name === "" || email === "" || message === "") {
+            errorMessage.textContent = "Please fill in all fields.";
+            errorMessage.style.display = 'block';
+            return;
+          }
+      
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              errorMessage.textContent = "Please enter a valid email address.";
+              errorMessage.style.display = 'block';
+              return;
+          }
+      
+          successMessage.textContent = "Message sent successfully!";
+          successMessage.style.display = 'block';
+          form.reset();
+        });
+
+
+
+        // const hamburger = document.getElementById('hamburger');
+        // const navMenu = document.getElementById('navmenu');
+        // hamburger.addEventListener('click', () => {
+        //     navMenu.classList.toggle('active');
+        // });
+      </script>
+      <script src="script.js"></script>
+      
+</body>
+</html>
